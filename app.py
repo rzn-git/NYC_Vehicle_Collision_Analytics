@@ -27,8 +27,6 @@ injured_people = st.slider("Slide to select a number of people injured in vehicl
 st.map(df5.query("injured_persons >= @injured_people")[["latitude" , "longitude"]])
 
 
-
-
 st.header(":orange[🚙 How many car accidents happen at a certain time of day?]")
 hour=st.slider("Slide to select a timespan", 0,23)
 df5 = df5[df5['date/time'].dt.hour == hour]
